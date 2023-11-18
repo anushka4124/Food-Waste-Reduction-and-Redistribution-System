@@ -1,4 +1,5 @@
 import predict as pred
+import route
 import waste_detect as detect
 import waste_graph as gr
 import nutri as n
@@ -50,13 +51,16 @@ if(ch==1):
 elif(ch==2):
     print("Welcome Recipient! \n\nJoining hands to serve the needy\n\n")
     while(True):
-        print("Choose an option: \n1. Enlist my NGO in the Recipient List \n2. Display nearby Food Donors \n3. Exit\n")
+        print("Choose an option: \n1. Enlist my NGO in the Recipient List \n2. Display nearby Food Donors \n3. Routes \n4. Exit\n")
         ch = int(input("Enter your choice: "))
         if(ch==1):
             ngo.add()
         elif(ch==2):
             ngo.search()
         elif(ch==3):
+            print("Fill in the following details and find out the most optimized routes from your NGO to the nearest donor Restaurants: ")
+            route.route_op()
+        elif(ch==4):
             print("Hope I could stand upto your expectations!\n \nHave a Good Day")
             break
         else:
